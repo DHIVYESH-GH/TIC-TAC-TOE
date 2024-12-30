@@ -1,0 +1,68 @@
+body{
+    background-color: darkred;
+}
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+#gameContainer{
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+}
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+.win-glow {
+    background-color: #ffeb3b; /* Bright yellow glow */
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #ffeb3b;
+    }
+    to {
+        box-shadow: 0 0 20px #ffeb3b;
+    }
+}
+/* Glow effect for X */
+.x-glow {
+    border: 4px solid #ff5733; /* Orange glow for X */
+    box-shadow: 0 0 10px #ff5733, 0 0 20px #ff5733;
+    transition: none; /* Remove transition to avoid delay */
+}
+
+/* Glow effect for O */
+.o-glow {
+    border: 4px solid #33ccff; /* Blue glow for O */
+    box-shadow: 0 0 10px #33ccff, 0 0 20px #33ccff;
+    transition: none; /* Remove transition to avoid delay */
+}
+
+
+.cell.x-glow {
+    box-shadow: 0 0 15px #ff5733, 0 0 25px #ff5733; /* Orange glow for X */
+}
+
+.cell.o-glow {
+    box-shadow: 0 0 15px #33ccff, 0 0 25px #33ccff; /* Blue glow for O */
+}
+.cell:hover {
+    outline: 4px solid #000000; /* Keep the dark black outline on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for emphasis */
+}
+
+transition: box-shadow 0.1s ease-in-out, border 0.1s ease-in-out;
+
+
+
+
+
