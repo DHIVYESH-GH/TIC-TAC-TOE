@@ -123,6 +123,7 @@ function restartGame() {
     cells.forEach(cell => {
         cell.textContent = "";
         cell.classList.remove("x-glow", "o-glow"); // Remove glow classes
+        cell.classList.remove("win-glow");
         cell.style.border = "4px solid black"; // Reset border style to default
         cell.style.boxShadow = "none"; // Reset shadow to remove glow
     });
